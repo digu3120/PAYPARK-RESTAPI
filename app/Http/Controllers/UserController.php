@@ -65,4 +65,25 @@ public function checkEmailExistence(Request $request)
 
         return response()->json(['exists' => $exists]);
     }
+        public function getEmailPhone(Request $request)
+    {
+        $phone = $request->header('phone');
+        $email = $request->header('email');
+
+        // Query your database or perform any data retrieval logic based on the phone and email values
+        // For example, you can retrieve data from a model using Eloquent:
+
+        // Assuming you have a 'User' model
+        $user = User::where('phone', $phone)
+            ->where('email', $email)
+            ->first();
+
+        if ($user) {
+            // Return the desired data as a JSON response
+            return response()->json($user, 200);
+        } else {
+            // Return an error response if no matching data is found
+            return response()->json(['error' => 'Data not found'], 404);
+        }
+    }
 }
