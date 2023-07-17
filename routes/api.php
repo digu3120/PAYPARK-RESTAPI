@@ -29,5 +29,5 @@ Route::get('/users/{email}', [UserController::class, 'getUserByEmail']);
 Route::get('/users/phone/{phone}', [UserController::class, 'getUserByphone']);
 Route::post('/check-email', [UserController::class, 'checkEmailExistence']);
 Route::post('/check-phone', [UserController::class, 'checkPhoneExistence']);
-
+Route::get('/data', [UserController::class, 'getEmailPhone']);
 
