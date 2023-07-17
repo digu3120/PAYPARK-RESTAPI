@@ -19,6 +19,7 @@ class AuthController extends Controller
             $cred->country_code = $R->country_code;
             $cred->is_email_verify = $R->is_email_verify;
             $cred->is_phone_verify = $R->is_phone_verify;
+            $cred->remember_token = $R->remember_token;
             $cred->password = Hash::make($R->password);
             $cred->save();
             $response = ['status' => 200, 'message' => 'Register Successfully! Welcome to Our Community'];
