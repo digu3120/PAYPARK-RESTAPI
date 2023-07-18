@@ -3,4 +3,3 @@
 
 1. registration and login completed..
 
-2. merge test
