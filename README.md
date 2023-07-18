@@ -3,4 +3,4 @@
 
 1. registration and login completed..
 
-2. merge test
+2. merge test1
