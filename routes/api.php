@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,4 +31,6 @@ Route::get('/users/phone/{phone}', [UserController::class, 'getUserByphone']);
 Route::post('/check-email', [UserController::class, 'checkEmailExistence']);
 Route::post('/check-phone', [UserController::class, 'checkPhoneExistence']);
 Route::get('/data', [UserController::class, 'getEmailPhone']);
+Route::post('/forgot-password/check-user', [UserController::class, 'checkUserExists']);
+Route::post('/update-password', [UserController::class, 'updatePassword']);
 
